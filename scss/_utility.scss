@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@300;400;500&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+$ff-lato: 'Lato', sans-serif;
+$ff-poppins:'Poppins', sans-serif;
+$ff-roboto: 'Roboto', sans-serif;
+$ff-varela:  'Varela Round';
+
+$color-1: #bb91e4;
+$color-2: #2a0f46;
+$color-3: #f8ceec;
+$color-4: #eae7ed;
+$color-5: #a88beb;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// html{
+//     font-size: 62.5%;
+// }
+// body{
+//     font-family: $ff-varela;
+// }
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 600px) { @content }; //600px        
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 900px) { @content }; //900px        
+    }
+
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 1200px) { @content }; //1200px   
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 1800px) { @content }; //1800px   
+    }
+}

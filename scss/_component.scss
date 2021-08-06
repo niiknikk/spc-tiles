@@ -1,0 +1,23 @@
+
+// text and paragraph
+.feature-heading{
+    display: block;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: $ff-varela;
+    color: $color-1;
+    letter-spacing: 5px;
+    margin: 0;
+    text-shadow: 0 5px 10px rgba(50, 0, 100, .15);
+    align-self: flex-start;
+    @include respond(tab-land){
+     font-size: 28px;
+    }
+    @include respond(tab-port){
+     font-size: 24px;
+    }
+    @include respond(phone){
+     font-size: 18px;
+    }
+ 
+ }
